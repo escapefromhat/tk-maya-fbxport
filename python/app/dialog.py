@@ -47,21 +47,20 @@ class AppDialog(QtGui.QWidget):
         # first, call the base class and let it do its thing.
         QtGui.QWidget.__init__(self)
 
-        # now load in the UI that was created in the UI designer
-        self.ui = Ui_Dialog()
-        self.ui.setupUi(self)
+        # skip ui setup
+        #self.ui = Ui_Dialog()
+        #self.ui.setupUi(self)
 
         # most of the useful accessors are available through the Application class instance
         # it is often handy to keep a reference to this. You can get it via the following method:
         self._app = sgtk.platform.current_bundle()
 
         # logging happens via a standard toolkit logger
-        logger.info("Launching Starter Application...")
+        logger.info("Launching FBXport")
 
         # via the self._app handle we can for example access:
         # - The engine, via self._app.engine
         # - A Shotgun API instance, via self._app.shotgun
         # - An Sgtk API instance, via self._app.sgtk
 
-        # lastly, set up our very basic UI
-        self.ui.context.setText("Current Context: %s" % self._app.context)
+
