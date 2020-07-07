@@ -8,7 +8,7 @@ import time
 
 # standard toolkit logger
 logger = sgtk.platform.get_logger(__name__)
-SDFramework = sgtk.platform.get_framework('tk-framework-scene-description_v0.1.1')
+SDFramework = sgtk.platform.get_framework('tk-framework-scene-description')
 MTW = SDFramework.import_module('utils.MayaTransformWriter')
 
 def xport(app_instance):
